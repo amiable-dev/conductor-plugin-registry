@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-11-19T09:00:00Z",
+  "plugins": [
+    {
+      "id": "spotify",
+      "name": "Spotify Web API",
+      "version": "0.1.0",
+      "author": "MIDIMon Contributors",
+      "description": "Control Spotify playback via Web API - play/pause, skip tracks, control volume, search, and manage playlists",
+      "category": "music",
+      "tags": ["spotify", "music", "streaming", "playback"],
+      "capabilities": ["Network"],
+      "download_url": "https://github.com/amiable-dev/midimon-plugin-registry/releases/download/plugins/midimon_wasm_spotify.wasm",
+      "signature_url": "https://github.com/amiable-dev/midimon-plugin-registry/releases/download/plugins/midimon_wasm_spotify.wasm.sig",
+      "checksum": "sha256:placeholder",
+      "size_bytes": 524288,
+      "license": "MIT",
+      "repository": "https://github.com/amiable-dev/midimon",
+      "documentation": "https://code.claude.com/docs/en/plugins/spotify",
+      "min_midimon_version": "2.5.0",
+      "signed": false,
+      "verified": false
+    },
+    {
+      "id": "obs",
+      "name": "OBS Studio Control",
+      "version": "0.1.0",
+      "author": "MIDIMon Contributors",
+      "description": "Control OBS Studio scenes, sources, filters, and streaming via WebSocket API",
+      "category": "streaming",
+      "tags": ["obs", "streaming", "video", "broadcast"],
+      "capabilities": ["Network"],
+      "download_url": "https://github.com/amiable-dev/midimon-plugin-registry/releases/download/plugins/midimon_wasm_obs_control.wasm",
+      "signature_url": "https://github.com/amiable-dev/midimon-plugin-registry/releases/download/plugins/midimon_wasm_obs_control.wasm.sig",
+      "checksum": "sha256:placeholder",
+      "size_bytes": 458752,
+      "license": "MIT",
+      "repository": "https://github.com/amiable-dev/midimon",
+      "documentation": "https://code.claude.com/docs/en/plugins/obs",
+      "min_midimon_version": "2.5.0",
+      "signed": false,
+      "verified": false
+    },
+    {
+      "id": "system-utils",
+      "name": "System Utilities",
+      "version": "0.1.0",
+      "author": "MIDIMon Contributors",
+      "description": "System-level utilities including clipboard management, notifications, file operations, and process control",
+      "category": "utilities",
+      "tags": ["system", "clipboard", "notifications", "utilities"],
+      "capabilities": ["Subprocess", "Filesystem", "SystemControl"],
+      "download_url": "https://github.com/amiable-dev/midimon-plugin-registry/releases/download/plugins/midimon_wasm_system_utils.wasm",
+      "signature_url": "https://github.com/amiable-dev/midimon-plugin-registry/releases/download/plugins/midimon_wasm_system_utils.wasm.sig",
+      "checksum": "sha256:placeholder",
+      "size_bytes": 327680,
+      "license": "MIT",
+      "repository": "https://github.com/amiable-dev/midimon",
+      "documentation": "https://code.claude.com/docs/en/plugins/system-utils",
+      "min_midimon_version": "2.5.0",
+      "signed": false,
+      "verified": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "music",
+      "name": "Music & Audio",
+      "description": "Plugins for music streaming, audio control, and DAW integration"
+    },
+    {
+      "id": "streaming",
+      "name": "Streaming & Video",
+      "description": "Plugins for video streaming, broadcast control, and recording"
+    },
+    {
+      "id": "utilities",
+      "name": "System Utilities",
+      "description": "General-purpose system utilities and productivity tools"
+    },
+    {
+      "id": "daw",
+      "name": "DAW Integration",
+      "description": "Digital Audio Workstation control and integration"
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming",
+      "description": "Game control and integration plugins"
+    }
+  ]
+}
