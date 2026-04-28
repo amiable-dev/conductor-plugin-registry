@@ -1,10 +1,10 @@
-# MIDIMon Plugin Registry
+# Conductor Plugin Registry
 
-Official plugin marketplace for [MIDIMon](https://github.com/amiable-dev/midimon) - a MIDI controller mapping system with WASM plugin support.
+Official plugin marketplace for [Conductor](https://github.com/amiable-dev/conductor) - a MIDI controller mapping system with WASM plugin support.
 
 ## Overview
 
-This repository hosts the official registry of verified WASM plugins for MIDIMon. Users can browse, download, and install plugins directly from the MIDIMon GUI or CLI.
+This repository hosts the official registry of verified WASM plugins for Conductor. Users can browse, download, and install plugins directly from the Conductor GUI or CLI.
 
 ## Registry Structure
 
@@ -17,27 +17,27 @@ The registry is a JSON file at `registry.json` containing:
 
 ## Accessing the Registry
 
-### Via MIDIMon GUI
-1. Open MIDIMon GUI
+### Via Conductor GUI
+1. Open Conductor GUI
 2. Navigate to **Plugins** → **Marketplace**
 3. Browse available plugins by category
 4. Click **Install** to download and verify plugins
 
-### Via MIDIMon CLI
+### Via Conductor CLI
 ```bash
 # List all available plugins
-midimonctl plugin list-available
+conductorctl plugin list-available
 
 # Install a plugin
-midimonctl plugin install spotify
+conductorctl plugin install spotify
 
 # Search for plugins
-midimonctl plugin search "music"
+conductorctl plugin search "music"
 ```
 
 ### Direct URL
 ```
-https://raw.githubusercontent.com/amiable-dev/midimon-plugin-registry/main/registry.json
+https://raw.githubusercontent.com/amiable-dev/conductor-plugin-registry/main/registry.json
 ```
 
 ## Available Plugins
@@ -66,7 +66,7 @@ https://raw.githubusercontent.com/amiable-dev/midimon-plugin-registry/main/regis
 
 ## Plugin Verification
 
-MIDIMon uses a three-tier trust model:
+Conductor uses a three-tier trust model:
 
 ### 1. Unsigned Plugins
 - No cryptographic signature
@@ -82,7 +82,7 @@ MIDIMon uses a three-tier trust model:
 
 ### 3. Trusted Plugins
 - Signed by trusted public keys
-- Official MIDIMon team or verified publishers
+- Official Conductor team or verified publishers
 - Highest security level
 - ✓✓ Recommended for production use
 
@@ -107,7 +107,7 @@ Each plugin entry includes:
   "license": "MIT",
   "repository": "https://github.com/...",
   "documentation": "https://...",
-  "min_midimon_version": "2.5.0",
+  "min_conductor_version": "2.5.0",
   "signed": false,
   "verified": false
 }
@@ -128,12 +128,12 @@ To submit a plugin to the official registry:
 2. **Sign Your Plugin** (optional but recommended)
    ```bash
    # Generate Ed25519 key pair
-   midimon-sign generate-keypair --output-dir ~/.midimon/keys
+   conductor-sign generate-keypair --output-dir ~/.conductor/keys
 
    # Sign the plugin
-   midimon-sign sign \
+   conductor-sign sign \
      --input target/wasm32-wasip1/release/your_plugin.wasm \
-     --private-key ~/.midimon/keys/private.key \
+     --private-key ~/.conductor/keys/private.key \
      --signer-name "Your Name" \
      --signer-email "you@example.com"
    ```
@@ -171,7 +171,7 @@ To submit a plugin to the official registry:
 3. **Trust Tier Assignment**
    - New contributors: Self-signed or unsigned
    - Verified publishers: Request trusted key addition
-   - Official plugins: Signed by MIDIMon team key
+   - Official plugins: Signed by Conductor team key
 
 ## Security Best Practices
 
@@ -215,8 +215,8 @@ This registry is MIT licensed. Individual plugins may use different licenses - c
 ## Support
 
 - **Documentation**: https://code.claude.com/docs/en/plugins
-- **Issues**: https://github.com/amiable-dev/midimon/issues
-- **Discussions**: https://github.com/amiable-dev/midimon/discussions
+- **Issues**: https://github.com/amiable-dev/conductor/issues
+- **Discussions**: https://github.com/amiable-dev/conductor/discussions
 
 ---
 
